@@ -1,0 +1,21 @@
+{
+  "name": "api_crud",
+  "version": "1.0.0",
+  "description": "CRUD",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Omkar Hiremath",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.7.9",
+    "body-parser": "^1.20.3",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "git": "^0.1.5",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.13.1"
+  }
+}
