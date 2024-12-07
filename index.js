@@ -3,18 +3,20 @@ import bodyParser from "body-parser";
 import pg from "pg";
 import multer from 'multer';
 import path from 'path';
+import dotenv from "dotenv";
+dotenv.config();
+
 
 const app = express();
 const port = 4000;
 
 // PostgreSQL Client Setup
 const db = new pg.Client({
-    user: "postgres",
-    host: "localhost",
-    database: "APIS",
-    password: "Omkar",
-    port: 5000, // Adjust port as per your PostgreSQL configuration
-    timezone: 'Asia/Kolkata' // Correct time zone format
+    user: process.env.DB_USER,
+    host: process.env.DB_HOST,
+    database: process.env.DB_DATABASE,
+    password: process.env.DB_PASSWORD,
+    port: process.env.DB_PORT,
 });
 db.connect();
 
